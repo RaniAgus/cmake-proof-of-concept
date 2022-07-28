@@ -2,16 +2,16 @@
 #include "stringlist.h"
 
 char *join_strings(char *accumulated, char *element) {
-    char *result;
-    if (string_is_empty(accumulated)) {
-        result = string_duplicate(element);
+    if (string_equals_ignore_case(accumulated, "[")) {
+        string_append(&accumulated, element);
     } else {
-        result = string_from_format("%s, %s", accumulated, element);
+        string_append_with_format(&accumulated, ", %s", element);
     }
-    free(accumulated);
-    return result;
+    return accumulated;
 }
 
 char *string_list_join(t_list *list) {
-    return list_fold(list, string_new(), (void *(*)(void *, void *)) join_strings);
+    char *result = list_fold(list, string_duplicate("["), (void *) join_strings);
+    string_append(&result, "]");
+    return result;
 }
