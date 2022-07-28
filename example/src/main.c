@@ -1,6 +1,6 @@
 #include <readline/readline.h>
 #include <stdlib.h>
-#include <utils/stringlist.h>
+#include <utils/joining.h>
 
 #define PROMPT "> "
 
@@ -26,7 +26,7 @@ t_list *read_lines() {
 }
 
 void print_lines(t_list *list) {
-    char *result = string_list_join(list);
+    char *result = join_string_list(list);
     puts(result);
     free(result);
 }

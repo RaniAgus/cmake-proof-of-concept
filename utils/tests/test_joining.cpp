@@ -2,27 +2,27 @@
 #include <string>
 
 extern "C" {
-#include "utils/stringlist.h"
+#include "utils/joining.h"
 }
 
 using std::string;
 
-TEST_SUITE("List of strings") {
+TEST_SUITE("Joining") {
     t_list *ayudantes;
     char *result;
 
-    TEST_CASE("Joining") {
+    TEST_CASE("List of strings") {
         ayudantes = list_create();
 
         SUBCASE("Should join an empty list") {
-            result = string_list_join(ayudantes);
+            result = join_string_list(ayudantes);
             REQUIRE_EQ(string(result), "[]");
         }
 
         list_add(ayudantes, string_duplicate("Agustin"));
 
         SUBCASE("Should join a list with one element") {
-            result = string_list_join(ayudantes);
+            result = join_string_list(ayudantes);
             REQUIRE_EQ(string(result), "[Agustin]");
         }
 
@@ -31,7 +31,7 @@ TEST_SUITE("List of strings") {
         list_add(ayudantes, string_duplicate("Juan"));
 
         SUBCASE("Should join a list with multiple elements") {
-            result = string_list_join(ayudantes);
+            result = join_string_list(ayudantes);
             REQUIRE_EQ(string(result), "[Agustin, Damian, Dario, Juan]");
         }
 

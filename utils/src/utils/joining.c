@@ -1,7 +1,6 @@
-#include <stdlib.h>
-#include "stringlist.h"
+#include "joining.h"
 
-char *join_strings(char *accumulated, char *element) {
+char *merge_strings(char *accumulated, char *element) {
     if (string_equals_ignore_case(accumulated, "[")) {
         string_append(&accumulated, element);
     } else {
@@ -10,8 +9,8 @@ char *join_strings(char *accumulated, char *element) {
     return accumulated;
 }
 
-char *string_list_join(t_list *list) {
-    char *result = list_fold(list, string_duplicate("["), (void *) join_strings);
+char *join_string_list(t_list *list) {
+    char *result = list_fold(list, string_duplicate("["), (void *) merge_strings);
     string_append(&result, "]");
     return result;
 }
