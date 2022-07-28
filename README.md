@@ -15,8 +15,9 @@ sudo curl -o /usr/local/include/doctest.h \
 ## Run & Debug
 
 El proyecto está configurado para ser importado desde la carpeta del repositorio
-a través de [CLion] o [VSCode] con [CMakeTools].
+a través de [CLion] o [VSCode] con [CMakeTools] y [C++TestMate].
 
 [CLion]: https://www.jetbrains.com/clion/features/run-and-debug.html
 [VSCode]: https://code.visualstudio.com/docs/editor/debugging
 [CMakeTools]: https://github.com/microsoft/vscode-cmake-tools/blob/main/docs/README.md
+[C++TestMate]: https://marketplace.visualstudio.com/items?itemName=matepek.vscode-catch2-test-adapter
