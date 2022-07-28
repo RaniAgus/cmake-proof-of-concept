@@ -2,14 +2,15 @@
 
 ## Dependencias
 
-- [doctest.h (v2.4.9)]
+- CMake 3.22 o superior
+- [doctest v2.4.9]
 
 ```bash
 sudo curl -o /usr/local/include/doctest.h \
   https://raw.githubusercontent.com/doctest/doctest/v2.4.9/doctest/doctest.h
 ```
 
-[doctest.h (v2.4.9)]: https://github.com/doctest/doctest
+[doctest v2.4.9]: https://github.com/doctest/doctest
 
 ## Run & Debug
 
