@@ -6,8 +6,12 @@
 - [doctest v2.4.9]
 
 ```bash
-sudo curl -o /usr/local/include/doctest.h \
-  https://raw.githubusercontent.com/doctest/doctest/v2.4.9/doctest/doctest.h
+git clone https://github.com/doctest/doctest
+cd doctest
+git checkout -b tags/v2.4.9
+cmake .
+make
+sudo make install
 ```
 
 [doctest v2.4.9]: https://github.com/doctest/doctest
