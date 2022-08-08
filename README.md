@@ -6,9 +6,8 @@
 - [doctest v2.4.9]
 
 ```bash
-git clone https://github.com/doctest/doctest
-cd doctest
-git checkout -b tags/v2.4.9
+wget -qO- https://github.com/doctest/doctest/archive/refs/tags/v2.4.9.tar.gz | tar xvz
+cd doctest-2.4.9
 cmake .
 make
 sudo make install
