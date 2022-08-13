@@ -6,11 +6,8 @@
 - [doctest v2.4.9]
 
 ```bash
-wget -qO- https://github.com/doctest/doctest/archive/refs/tags/v2.4.9.tar.gz | tar xvz
-cd doctest-2.4.9
-cmake .
-make
-sudo make install
+sudo curl --create-dirs -o /usr/local/include/doctest/doctest.h \
+  https://raw.githubusercontent.com/doctest/doctest/v2.4.9/doctest/doctest.h
 ```
 
 [doctest v2.4.9]: https://github.com/doctest/doctest
