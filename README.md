@@ -5,12 +5,6 @@
 - CMake 3.22 o superior
 - [doctest v2.4.9]
 
-```bash
-sudo mkdir /usr/local/include/doctest
-curl -fsSL https://raw.githubusercontent.com/doctest/doctest/v2.4.9/doctest/doctest.h \
-  | sudo tee /usr/local/include/doctest/doctest.h
-```
-
 [doctest v2.4.9]: https://github.com/doctest/doctest
 
 ## Run & Debug
