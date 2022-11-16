@@ -34,13 +34,23 @@ add_executable(${PROJECT_NAME}_tests ${TESTS} ${SOURCES})
 target_include_directories(${PROJECT_NAME}_tests PUBLIC tests)
 
 ## link libraries only to the test target (commons has already been linked globally)
-target_link_libraries(${PROJECT_NAME}_tests doctest)
+target_link_libraries(${PROJECT_NAME}_tests doctest gcov)
 
 ## add doctest configuration headers
 target_compile_definitions(${PROJECT_NAME}_tests PRIVATE
         DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
         DOCTEST_CONFIG_USE_STD_HEADERS
         DOCTEST_CONFIG_TREAT_CHAR_STAR_AS_STRING)
+
+## add coverage compile options
+target_compile_options(${PROJECT_NAME}_tests PUBLIC --coverage)
+
+# cleanup coverage files before build
+add_custom_command(
+        TARGET ${PROJECT_NAME}_tests
+        COMMAND find . -iname \"*.gcda\" -delete
+        DEPENDS ${TESTS} ${SOURCES}
+        WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR})
 
 ## add a test to be run with ctest
 add_test(NAME ${PROJECT_NAME}_tests COMMAND ./${PROJECT_NAME}_tests)
