@@ -12,16 +12,5 @@
       "problemMatcher": [],
       "detail": "CMake build task"
     },
-    {
-      "type": "cmake",
-      "label": "CMake: build utils (tests)",
-      "command": "build",
-      "targets": [
-        "utils_tests"
-      ],
-      "group": "build",
-      "problemMatcher": [],
-      "detail": "CMake build task"
-    },
   ]
 }
