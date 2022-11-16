@@ -1,5 +1,7 @@
 # cmake-proof-of-concept
 
+Ejemplo de uso de CMake para compilar proyectos en C.
+
 ## Dependencias
 
 - gcc v9.4.0 o superior
@@ -29,3 +31,27 @@ repositorio e incluirlo.
 
 [`test/doctest`]: https://github.com/RaniAgus/cmake-proof-of-concept/tree/test/doctest
 [doctest/doctest]: https://github.com/doctest/doctest
+
+## Despliegue en Ubuntu Server
+
+1. Instalar las commons:
+
+```bash
+git clone https://github.com/sisoputnfrba/so-commons-library
+make -C so-commons-library install
+```
+
+2. Clonar el proyecto y configurarlo con [cmake(1)]:
+
+```bash
+git clone https://github.com/RaniAgus/cmake-proof-of-concept
+cd cmake-proof-of-concept
+cmake -S ./ -B ./build -DCMAKE_BUILD_TYPE=Release
+```
+[cmake(1)]: https://cmake.org/cmake/help/latest/manual/cmake.1.html
+
+3. Ejecutar el ejemplo:
+
+```bash
+./build/example/example
+```
