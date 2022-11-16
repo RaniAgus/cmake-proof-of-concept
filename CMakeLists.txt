@@ -15,6 +15,9 @@ set(CMAKE_CXX_FLAGS "-Wall -Werror -Wno-write-strings")
 # link libraries globally
 link_libraries(commons)
 
+# include header paths globally
+include_directories(utils/src)
+
 # add subprojects
 add_subdirectory(example)
 add_subdirectory(utils)
