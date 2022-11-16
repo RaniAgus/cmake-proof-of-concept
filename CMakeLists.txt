@@ -8,10 +8,6 @@ project(cmake-proof-of-concept)
 set(CMAKE_C_STANDARD 11)
 set(CMAKE_C_FLAGS "-Wall -Werror")
 
-# set c++ standard and flags globally (recommended)
-set(CMAKE_CXX_STANDARD 11)
-set(CMAKE_CXX_FLAGS "-Wall -Werror -Wno-write-strings")
-
 # link libraries globally
 link_libraries(commons)
 
