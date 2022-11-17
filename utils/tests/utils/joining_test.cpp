@@ -5,8 +5,6 @@ extern "C" {
 #include "utils/joining.h"
 }
 
-using std::string;
-
 TEST_SUITE("Joining") {
     t_list *ayudantes;
     char *result;
@@ -16,14 +14,14 @@ TEST_SUITE("Joining") {
 
         SUBCASE("Should join an empty list") {
             result = join_string_list(ayudantes);
-            REQUIRE_EQ(string(result), "[]");
+            REQUIRE_EQ(result, "[]");
         }
 
         list_add(ayudantes, string_duplicate("Agustin"));
 
         SUBCASE("Should join a list with one element") {
             result = join_string_list(ayudantes);
-            REQUIRE_EQ(string(result), "[Agustin]");
+            REQUIRE_EQ(result, "[Agustin]");
         }
 
         list_add(ayudantes, string_duplicate("Damian"));
@@ -32,7 +30,7 @@ TEST_SUITE("Joining") {
 
         SUBCASE("Should join a list with multiple elements") {
             result = join_string_list(ayudantes);
-            REQUIRE_EQ(string(result), "[Agustin, Damian, Dario, Juan]");
+            REQUIRE_EQ(result, "[Agustin, Damian, Dario, Juan]");
         }
 
         list_destroy_and_destroy_elements(ayudantes, free);

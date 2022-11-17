@@ -16,9 +16,9 @@ target_link_libraries(${PROJECT_NAME} )
 # TESTS
 # -----
 
-## include doctest/v2.4.9 using FetchContent module
+## include doctest/v2.4.8 using FetchContent module
 include(FetchContent)
-FetchContent_Declare(doctest GIT_REPOSITORY https://github.com/doctest/doctest GIT_TAG v2.4.9)
+FetchContent_Declare(doctest GIT_REPOSITORY https://github.com/doctest/doctest GIT_TAG v2.4.8)
 FetchContent_MakeAvailable(doctest)
 
 ## exclude files named "main" from sources (that doesn't affect previous target)
@@ -34,9 +34,10 @@ add_executable(${PROJECT_NAME}_tests ${TESTS} ${SOURCES})
 target_include_directories(${PROJECT_NAME}_tests PUBLIC tests)
 
 ## link libraries only to the test target (commons has already been linked globally)
-target_link_libraries(${PROJECT_NAME}_tests doctest::doctest)
+target_link_libraries(${PROJECT_NAME}_tests doctest)
 
 ## add doctest configuration headers
 target_compile_definitions(${PROJECT_NAME}_tests PRIVATE
         DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
-        DOCTEST_CONFIG_USE_STD_HEADERS)
+        DOCTEST_CONFIG_USE_STD_HEADERS
+        DOCTEST_CONFIG_TREAT_CHAR_STAR_AS_STRING)
