@@ -1,6 +1,3 @@
-# PROJECT
-# -------
-
 ## set project name and language
 project(example)
 
