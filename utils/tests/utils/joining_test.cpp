@@ -1,5 +1,4 @@
 #include <doctest/doctest.h>
-#include <string>
 
 extern "C" {
 #include "utils/joining.h"
