@@ -26,10 +26,10 @@ En cada branch se encuentran ejemplos de uso de distintos frameworks de testing:
 No hace falta instalarlos, CMake se encarga de descargar el proyecto del
 repositorio e incluirlo.
 
-[`test/cspec`]: https://github.com/RaniAgus/cmake-proof-of-concept/tree/test/cspec
+[`test/cspec`]: https://github.com/RaniAgus/cmake-proof-of-concept/compare/main...test/cspec
 [mumuki/cspec]: https://github.com/mumuki/cspec
 
-[`test/doctest`]: https://github.com/RaniAgus/cmake-proof-of-concept/tree/test/doctest
+[`test/doctest`]: https://github.com/RaniAgus/cmake-proof-of-concept/compare/main...test/doctest
 [doctest/doctest]: https://github.com/doctest/doctest
 
 ## Despliegue en Ubuntu Server
