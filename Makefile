@@ -15,3 +15,11 @@ clean:
 release: CMAKE_BUILD_TYPE = Release
 release: all
 .PHONY: release
+
+test: all
+	ctest --test-dir $(BUILD_DIR) --extra-verbose
+.PHONY: test
+
+valgrind: all
+	ctest --test-dir $(BUILD_DIR) --extra-verbose -R utils_tests_with_valgrind
+.PHONY: valgrind
