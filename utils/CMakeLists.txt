@@ -36,3 +36,11 @@ target_include_directories(${PROJECT_NAME}_tests PUBLIC tests ${cspecs_SOURCE_DI
 
 ## link libraries only to the test target (commons has already been linked globally)
 target_link_libraries(${PROJECT_NAME}_tests cspecs)
+
+## add a test to be run with ctest
+add_test(NAME ${PROJECT_NAME}_tests COMMAND ./${PROJECT_NAME}_tests)
+add_test(NAME ${PROJECT_NAME}_tests_with_valgrind COMMAND valgrind
+        --leak-check=full
+        --error-exitcode=1
+        --track-origins=yes
+        ./${PROJECT_NAME}_tests)

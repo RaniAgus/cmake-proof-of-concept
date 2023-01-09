@@ -8,6 +8,9 @@ project(cmake-proof-of-concept)
 set(CMAKE_C_STANDARD 11)
 set(CMAKE_C_FLAGS "-Wall -Werror")
 
+## enable testing with ctest
+enable_testing()
+
 # link libraries globally
 link_libraries(commons)
 
