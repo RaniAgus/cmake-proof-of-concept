@@ -12,6 +12,9 @@ set(CMAKE_C_FLAGS "-Wall -Werror")
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_FLAGS "-Wall -Werror -Wno-write-strings")
 
+## enable testing with ctest
+enable_testing()
+
 # link libraries globally
 link_libraries(commons)
 

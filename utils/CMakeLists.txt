@@ -41,3 +41,11 @@ target_compile_definitions(${PROJECT_NAME}_tests PRIVATE
         DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
         DOCTEST_CONFIG_USE_STD_HEADERS
         DOCTEST_CONFIG_TREAT_CHAR_STAR_AS_STRING)
+
+## add a test to be run with ctest
+add_test(NAME ${PROJECT_NAME}_tests COMMAND ./${PROJECT_NAME}_tests)
+add_test(NAME ${PROJECT_NAME}_tests_with_valgrind COMMAND valgrind
+        --leak-check=full
+        --error-exitcode=1
+        --track-origins=yes
+        ./${PROJECT_NAME}_tests)
