@@ -22,6 +22,7 @@ a través de [CLion] o [VSCode] con [CMakeTools] y [C++TestMate].
 En cada branch se encuentran ejemplos de uso de distintos frameworks de testing:
   - [`test/cspec`] -- [mumuki/cspec] (en C, más simple)
   - [`test/doctest`] -- [doctest/doctest] (en C++, integrado a CLion y VSCode)
+    - [`test/doctest-with-coverage`]: extra para poder [ejecutar con coverage]
 
 No hace falta instalarlos, CMake se encarga de descargar el proyecto del
 repositorio e incluirlo.
@@ -31,6 +32,9 @@ repositorio e incluirlo.
 
 [`test/doctest`]: https://github.com/RaniAgus/cmake-proof-of-concept/compare/main...test/doctest
 [doctest/doctest]: https://github.com/doctest/doctest
+
+[`test/doctest-with-coverage`]: https://github.com/RaniAgus/cmake-proof-of-concept/compare/test/doctest...test/doctest-with-coverage
+[ejecutar con coverage]: https://www.jetbrains.com/help/clion/code-coverage-clion.html
 
 ## Despliegue en Ubuntu Server
 
