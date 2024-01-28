@@ -36,6 +36,10 @@ repositorio e incluirlo.
 [`test/doctest-with-coverage`]: https://github.com/RaniAgus/cmake-proof-of-concept/compare/test/doctest...test/doctest-with-coverage
 [ejecutar con coverage]: https://www.jetbrains.com/help/clion/code-coverage-clion.html
 
+También hay un ejemplo mucho más minimalista a partir del [`tp0`].
+
+[`tp0`]: https://github.com/RaniAgus/cmake-proof-of-concept/compare/ebc0983c4a820e02705abde049c29a7b34b74722...tp0
+
 ## Despliegue en Ubuntu Server
 
 1. Instalar las commons:
