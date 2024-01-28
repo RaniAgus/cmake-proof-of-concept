@@ -1,9 +1,5 @@
 {
   "files.associations": {
     "*.h": "c"
-  },
-  "files.exclude": {
-    ".idea/": true,
-    "cmake-build*/": true
   }
 }
